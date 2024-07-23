@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: rgb(31, 188, 76);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #f0f3f0;
+}
+</style>
+{% load static %}  
+<link href="{% static 'css/style.css' %}" rel="stylesheet">  
+</head>
+<body>
+  
+<ul>
+    <li><a class="active" href="/home">Sign-out</a></li>
+    <li><a class="active" href="#about">Contact</a></li>
+    <li><a class="active" href="#contact">About us</a></li>
+    <li><a class="active" href="/delete">Delete</a></li>
+    <li><a class="active" href="/edit">Update</a></li>
+    <li><a class="active"    href="/viewall">View All</a></li>
+    <li><a class="active" href="/myhome">Home</a></li>
+    
+</ul>
+<h1>Welcome {{user_id}}</h1>
+<h2>My Home Page</h2>
+
+</body>
+</html>
+
+

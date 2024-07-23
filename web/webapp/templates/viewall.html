@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+  <b><a   href="/myhome" style="float: right;">&#8678;Home</a></b>
+<h2>View All</h2>
+<form action="">
+<table>
+  <tr>
+    <th>SLNO.</th>
+    <th>User ID</th>
+    <th>Address</th>
+    <th>Mobile</th>
+    <th>Gender</th>
+    <th>date</th>
+    <th>email</th>
+    <th>password</th>
+    
+  </tr>
+  {% for prof in profile %}
+  <tr>
+    <td>{{ prof.id }}</td>
+    <td>{{ prof.userid }}</td>
+    <td>{{ prof.address }}</td>
+    <td>{{ prof.mobile }}</td>
+    <td>{{ prof.gender }}</td>
+    <td>{{ prof.dob }}</td>
+    <td>{{ prof.email }}</td>
+    <td>{{ prof.upass }}</td>
+  </tr>
+  {% endfor %}
+   
+</table>
+</form>
+</body>
+</html>
